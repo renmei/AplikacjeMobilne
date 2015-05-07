@@ -42,6 +42,16 @@
                           otherButtonTitles:nil] show];
     }
     
+    if (procentNapiwku >= 45) {
+        [[[UIAlertView alloc] initWithTitle:@"Uwaga!!!"
+                                    message:@"No chyba tu kogoś pogrzało... :)"
+                                   delegate:nil
+                          cancelButtonTitle:@"ok"
+                          otherButtonTitles:nil] show];
+        procentNapiwku = 30;
+        self.Tf_napiwek.text =@ "30";
+    }
+    
     kwotaNapiwku = kwotaRachunku * (procentNapiwku / 100);
     rachunekKoncowy = kwotaRachunku + kwotaNapiwku;
     
